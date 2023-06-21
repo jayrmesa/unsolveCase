@@ -1,21 +1,34 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const Case = () => {
-  const [currentCase, setCurrentCase] = useState(null);
-  const [discoveredClues, setDiscoveredClues] = useState([]);
-  const [identifiedSuspects, setIdentifiedSuspects] = useState([]);
-  const [isSolved, setIsSolved] = useState(false);
-
-  // Add more state variables 
-
-  // Code the logic and rendering for the Game component
+const Case = ({ title, description, clues, suspects }) => {
+  // Implement state variables and logic as needed
 
   return (
-    // JSX code for rendering the Game component
     <div>
-      {/* Render the case, clues, suspects, and other game elements */}
+      {/* Render the case */}
+      <h2>{title}</h2>
+      <p>{description}</p>
+
+      {/* Render clues */}
+      <h3>Clues:</h3>
+      <ul>
+        {clues.map((clue) => (
+          <li key={clue.id}>{clue.title}</li>
+        ))}
+      </ul>
+
+      {/* Render suspects */}
+      <h3>Suspects:</h3>
+      <ul>
+        {suspects.map((suspect) => (
+          <li key={suspect.id}>{suspect.name}</li>
+        ))}
+      </ul>
+
+      {/* Add more JSX code to render other case details */}
     </div>
   );
 };
 
 export default Case;
+
