@@ -1,0 +1,43 @@
+/* Example CSS for customizing the rendering and styling */
+
+.case-title {
+  font-size: 24px;
+  color: #333;
+}
+
+.case-description {
+  font-size: 16px;
+  color: #666;
+}
+
+.clues-heading {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.clues-list {
+  list-style-type: none;
+}
+
+.clue-item {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.suspects-heading {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.suspects-list {
+  list-style-type: none;
+}
+
+.suspect-item {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 4px;
+}

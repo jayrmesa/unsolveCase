@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import './Case.css'; // Import the CSS file
+
 const Game = () => {
   const [currentCase, setCurrentCase] = useState(null);
   const [discoveredClues, setDiscoveredClues] = useState([]);
@@ -11,9 +13,15 @@ const Game = () => {
   // Code the logic and rendering for the Game component
 
   return (
-    // JSX code for rendering the Game component
     <div>
-      {/* Render the case, clues, suspects, and other game elements */}
+      {/* ... */}
+      <Case
+        title={caseTitle}
+        description={caseDescription}
+        clues={caseClues}
+        suspects={caseSuspects}
+      />
+      {/* ... */}
     </div>
   );
 };
