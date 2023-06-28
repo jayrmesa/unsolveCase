@@ -2,7 +2,18 @@ import React from 'react';
 
 
 const Case = ({ title, description, clues, suspects }) => {
-  // Implement state variables and logic as needed
+
+
+  const handleClueClick = (clueId) => {
+    // Handle click event for a clue
+    console.log(`Clue clicked: ${clueId}`);
+  };
+
+  const handleSuspectSelect = (suspectId) => {
+    // Handle select event for a suspect
+    console.log(`Suspect selected: ${suspectId}`);
+  };
+
 
   return (
     <div>
@@ -14,7 +25,11 @@ const Case = ({ title, description, clues, suspects }) => {
       <h3 className="clues-heading">Clues:</h3>
       <ul className="clues-list">
         {clues.map((clue) => (
-          <li key={clue.id} className="clue-item">
+          <li
+            key={clue.id}
+            className="clue-item"
+            onClick={() => handleClueClick(clue.id)}
+          >
             {clue.title}
           </li>
         ))}
@@ -24,7 +39,11 @@ const Case = ({ title, description, clues, suspects }) => {
       <h3 className="suspects-heading">Suspects:</h3>
       <ul className="suspects-list">
         {suspects.map((suspect) => (
-          <li key={suspect.id} className="suspect-item">
+          <li
+            key={suspect.id}
+            className="suspect-item"
+            onMouseOver={() => handleSuspectSelect(suspect.id)}
+          >
             {suspect.name}
           </li>
         ))}
